@@ -1,0 +1,94 @@
+@import "../../responsive.scss";
+.profile{
+    display:flex;
+    height: 100%;
+
+    @include md{
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .details{
+        flex: 3;
+        padding-bottom: 50px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+        }
+
+        @include md{
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1{
+                    font-weight: 400;
+                }
+
+                button{
+                    background-color: #fece51;
+                    font-weight: bold;
+                    border: none;
+                    cursor: pointer;
+                    padding: 12px 14px;
+                }
+
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .icon{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                }
+                button{
+                    width: 100px;
+                    background-color: teal;
+                    padding: 10px 20px;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 3px;
+                }
+
+            }
+
+        }
+    }
+
+    .chatContainer{
+        flex: 2;
+        background-color: #fcf5f3;
+        height: 100%;
+        
+        @include md{
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding: 0px 20px;
+            height: 100%;
+        }
+    }
+}
